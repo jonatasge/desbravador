@@ -1,13 +1,3 @@
-@media (max-width: 1199px) {
-  .UserTemplate {
-    flex-wrap: wrap;
-  }
-
-  .UserTemplate .OverviewMain {
-    width: 100vw;
-  }  
-}
-
 .UserTemplate .OverviewMain > .Subtitle {
   font-size: 0.875rem;
 }

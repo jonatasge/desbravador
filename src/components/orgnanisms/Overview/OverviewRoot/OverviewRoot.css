@@ -1,4 +1,17 @@
 .OverviewRoot {
   display: grid;
   grid-template-columns: calc(260px + 2rem) calc(100% - 260px - 2rem);
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .OverviewRoot {
+    grid-template-columns: calc(200px + 2rem) calc(100% - 200px - 2rem);
+  }
+}
+
+@media (max-width: 767px) {
+  .OverviewRoot {
+    display: block;
+  }
 }
