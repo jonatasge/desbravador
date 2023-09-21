@@ -2,6 +2,7 @@
 
 @import url("./assets/reset.css");
 @import url("./components/atoms/atoms.css");
+@import url("./components/molecules/molecules.css");
 
 body {
   font-family: "Roboto", sans-serif;

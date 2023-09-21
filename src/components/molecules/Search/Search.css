@@ -1,0 +1,17 @@
+.Search {
+  text-align: left;
+}
+
+.Search .container {
+  align-items: flex-start;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.Search .Label {
+  padding: 0.25rem 1rem;
+}
+
+.Search .Label {
+  padding: 0.25rem 1rem;
+}
