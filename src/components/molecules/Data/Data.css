@@ -1,0 +1,9 @@
+.Data {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.Data .Label {
+  display: inline-block;
+  font-size: 1rem;
+}
