@@ -44,6 +44,19 @@ body {
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.my-1 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .my-2 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -53,6 +66,22 @@ body {
   margin-top: 2rem;
 }
 
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
 .p-2 {
   padding: 1rem;
+}
+
+.gap-1 {
+  gap: 0.5rem;
+}
+
+.gap-2 {
+  gap: 1rem;
 }
