@@ -1,0 +1,4 @@
+.OverviewRoot {
+  display: grid;
+  grid-template-columns: calc(260px + 2rem) calc(100% - 260px - 2rem);
+}

@@ -1,0 +1,9 @@
+.OverviewAside {
+  padding: 1rem;
+  text-align: center;
+}
+
+.OverviewAside .Title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
