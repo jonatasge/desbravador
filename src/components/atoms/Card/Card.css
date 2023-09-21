@@ -1,0 +1,5 @@
+.Card {
+  border-radius: var(--card-border-radius);
+  border: var(--card-border);
+  padding: 1rem;
+}

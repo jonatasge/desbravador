@@ -4,4 +4,7 @@
 
   --border: 2px solid rgba(255, 255, 255, 0.15);
   --border-radius: 2rem;
+  
+  --card-border: var(--border);
+  --card-border-radius: 0.5rem;
 }
