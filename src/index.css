@@ -1,51 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-@import url("./assets/reset.css");
+@import url("./styles/main.css");
 @import url("./components/atoms/atoms.css");
 @import url("./components/molecules/molecules.css");
-
-body {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-}
-
-.transition {
-  transition: all linear 0.2s;
-}
-
-.shadow {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.hover\:shadow:hover {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-}
-
-.flex {
-  display: flex;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.h-screen {
-  height: 100vh;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.my-2 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.mt-4 {
-  margin-top: 2rem;
-}

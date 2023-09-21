@@ -1,0 +1,7 @@
+:root {
+  --colors-bg-body: #222;
+  --colors-text-body: white;
+
+  --border: 2px solid rgba(255, 255, 255, 0.15);
+  --border-radius: 2rem;
+}

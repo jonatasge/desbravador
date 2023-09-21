@@ -1,6 +1,8 @@
 .Input {
-    border-radius: 2rem;
-    border: 1px solid rgba(0,0,0,0.1);
+    background-color: var(--colors-bg-body);
+    color: var(--colors-text-body);
+    border-radius: var(--border-radius);
+    border: var(--border);
     font-size: 1rem;
     height: 2.625rem;
     padding: 0.5rem 1rem;
