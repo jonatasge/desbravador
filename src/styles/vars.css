@@ -13,6 +13,14 @@
   --avatar-height: 100px;
   --avatar-width: 100px;
 
+  --breadcrumb-font-size: 0.85rem;
+  --breadcrumb-font-weight: 500;
+  --breadcrumb-line-height: 1rem;
+  --breadcrumb-gap: 0.25rem;
+  --breadcrumb-slash-font-size: var(--breadcrumb-font-size);
+  --breadcrumb-slash-font-weight: var(--breadcrumb-font-weight);
+  --breadcrumb-slash-line-height: var(--breadcrumb-line-height);
+
   --card-bg-color: var(--body-bg-color);
   --card-border: var(--border);
   --card-radius: 0.5rem;

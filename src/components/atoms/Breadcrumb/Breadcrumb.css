@@ -1,0 +1,15 @@
+.Breadcrumb {
+  align-items: center;
+  display: flex;
+  font-size: var(--breadcrumb-font-size);
+  font-weight: var(--breadcrumb-font-weight);
+  gap: var(--breadcrumb-gap);
+  justify-content: left;
+  line-height: var(--breadcrumb-line-height);
+}
+
+.Breadcrumb .slash {
+  font-size: var(--breadcrumb-font-size);
+  font-weight: var(--breadcrumb-font-weight);
+  line-height: var(--breadcrumb-line-height);
+}
