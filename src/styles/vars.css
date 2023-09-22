@@ -18,6 +18,8 @@
   --card-border: var(--border);
   --card-radius: 0.5rem;
 
+  --skeleton-radius: 0.25rem;
+
   --subtitle-font-size: 1.25rem;
   --subtitle-font-weight: 400;
   --subtitle-line-height: 1.59rem;
@@ -25,4 +27,13 @@
   --title-font-size: 2rem;
   --title-font-weight: 400;
   --title-line-height: 2.5rem;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
 }
