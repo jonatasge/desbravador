@@ -1,12 +1,18 @@
-import { MdArrowDownward, MdArrowUpward, MdStarOutline } from "react-icons/md";
+import { MdArrowDownward, MdArrowUpward } from "react-icons/md";
 import { Link as Router } from "react-router-dom";
 
-import { Card, Container, Link, Skeleton, Subtitle, Text } from "@/components/atoms";
+import {
+  Card,
+  Container,
+  Link,
+  Skeleton,
+  Subtitle,
+  Text,
+} from "@/components/atoms";
 import { ClickableCard, Data } from "@/components/molecules";
-import { Overview } from "@/components/orgnanisms";
+import { Overview, Stars } from "@/components/orgnanisms";
 import { Repository } from "@/core/models/Repository";
 import { User } from "@/core/models/User";
-import { formatNumber } from "@/utils/data";
 
 export type UserTemplateProps = {
   loadingUser?: boolean;
@@ -92,11 +98,13 @@ export const UserTemplate = ({
           ) : (
             <section>
               <div className="section-header flex justify-between">
-                <Subtitle>
-                  Top 50 repositórios mais populares:
-                </Subtitle>
+                <Subtitle>Top 50 repositórios mais populares:</Subtitle>
 
-                <Data label="Ordem:" onClick={onSortChange} className="select-none">
+                <Data
+                  label="Ordem:"
+                  onClick={onSortChange}
+                  className="select-none"
+                >
                   {sort === "asc" ? (
                     <span>
                       Crescente <MdArrowUpward />
@@ -119,9 +127,7 @@ export const UserTemplate = ({
                     <ClickableCard className="my-1 flex items-center justify-between">
                       <Link as="h3">{repository.name}</Link>
 
-                      <Data label={<MdStarOutline />}>
-                        {formatNumber(repository.stargazers_count)}
-                      </Data>
+                      <Stars>{repository.stargazers_count}</Stars>
                     </ClickableCard>
                   </Router>
                 ))
