@@ -1,15 +1,14 @@
 import {
   Avatar,
   AvatarProps,
-  Subtitle,
-  SubtitleProps,
+  Skeleton,
   Title,
   TitleProps,
 } from "@/components/atoms";
 
 export type OverviewAsideProps = Omit<JSX.IntrinsicElements["div"], "title"> & {
+  loading?: boolean;
   avatar?: AvatarProps;
-  subtitle?: SubtitleProps;
   title?: TitleProps;
 };
 
@@ -17,16 +16,24 @@ export const OverviewAside = ({
   avatar,
   children,
   className,
-  subtitle,
+  loading,
   title,
   ...props
 }: OverviewAsideProps) => {
   return (
     <div className={`OverviewAside ${className || ""}`} {...props}>
-      <Avatar {...avatar} />
-      <Title {...title} />
-      <Subtitle {...subtitle} />
-      
+      {loading ? (
+        <>
+          <Skeleton type="Avatar" className={avatar?.className} />
+          <Skeleton type="Title" className={title?.className} />
+        </>
+      ) : (
+        <>
+          <Avatar {...avatar} />
+          <Title {...title} />
+        </>
+      )}
+
       {children}
     </div>
   );
