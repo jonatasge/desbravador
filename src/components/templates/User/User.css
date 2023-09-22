@@ -1,3 +1,15 @@
 .UserTemplate .OverviewMain > .Subtitle {
   font-size: 0.875rem;
 }
+
+.UserTemplate .OverviewMain > .RouterLink {
+  color: unset;
+  text-decoration: none;
+}
+
+.UserTemplate .OverviewMain > .RouterLink .Data {
+  display: flex;
+  font-size: 0.85rem;
+  gap: 0.25rem;
+  line-height: 1rem;
+}
