@@ -20,14 +20,14 @@ export const UserPage = ({ getUser, getRepositories }: UserPageProps) => {
   const [repos, setRepos] = useState<Repository[]>([]);
   const [sort, setSort] = useState("desc");
 
-  const handleUser = async (username: string) => {
+  const getUserData = async (username: string) => {
     setLoadingUser(() => true);
     const user = await getUser(username);
     setUser(() => user);
     setLoadingUser(() => false);
   };
 
-  const handleRepos = async (username: string) => {
+  const getReposData = async (username: string) => {
     setLoadingRepos(() => true);
     const repos = await getRepositories({ username });
     if (repos instanceof Array) {
@@ -56,8 +56,8 @@ export const UserPage = ({ getUser, getRepositories }: UserPageProps) => {
 
   useEffect(() => {
     if (params.username) {
-      handleUser(params.username as string);
-      handleRepos(params.username as string);
+      getUserData(params.username);
+      getReposData(params.username);
     }
   }, [params.username]);
 
