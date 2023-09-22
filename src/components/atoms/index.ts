@@ -7,4 +7,5 @@ export * from "./Label/Label";
 export * from "./Link/Link";
 export * from "./Skeleton/Skeleton";
 export * from "./Subtitle/Subtitle";
+export * from "./Text/Text";
 export * from "./Title/Title";
