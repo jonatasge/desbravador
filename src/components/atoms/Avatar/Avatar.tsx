@@ -1,19 +1,9 @@
-export type AvatarProps = JSX.IntrinsicElements["img"];
+export type AvatarProps = Omit<JSX.IntrinsicElements["img"], 'height' | 'width'>;
 
 export const Avatar = ({
-  alt = "avatar",
+  alt = "Avatar",
   className,
-  height = 100,
-  width = 100,
   ...props
 }: AvatarProps) => {
-  return (
-    <img
-      alt={alt}
-      className={`Avatar ${className || ""}`}
-      height={height}
-      width={width}
-      {...props}
-    />
-  );
+  return <img alt={alt} className={`Avatar ${className || ""}`} {...props} />;
 };

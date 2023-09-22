@@ -1,6 +1,6 @@
 .Button {
   background-color: var(--colors-bg-body);
-  border-radius: var(--border-radius);
+  border-radius: var(--radius);
   border: var(--border);
   color: var(--colors-text-body);
   cursor: pointer;

@@ -1,5 +1,5 @@
 .Subtitle {
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 1.59rem;
+  font-size: var(--subtitle-font-size);
+  font-weight: var(--subtitle-font-weight);
+  line-height: var(--subtitle-line-height);
 }

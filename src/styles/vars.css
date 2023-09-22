@@ -4,8 +4,25 @@
   --colors-link: rgb(47, 129, 247);
 
   --border: 2px solid rgba(255, 255, 255, 0.15);
-  --border-radius: 2rem;
-  
+  --radius: 2rem;
+
+  --body-font-size: 16px;
+  --body-font-weight: 400;
+  --body-line-height: 1.25rem;
+
+  --avatar-bg-color: rgba(255, 255, 255, 0.2);
+  --avatar-radius: 100%;
+  --avatar-height: 100px;
+  --avatar-width: 100px;
+
   --card-border: var(--border);
-  --card-border-radius: 0.5rem;
+  --card-radius: 0.5rem;
+
+  --subtitle-font-size: 1.25rem;
+  --subtitle-font-weight: 400;
+  --subtitle-line-height: 1.59rem;
+
+  --title-font-size: 2rem;
+  --title-font-weight: 400;
+  --title-line-height: 2.5rem;
 }

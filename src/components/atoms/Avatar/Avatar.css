@@ -1,3 +1,8 @@
 .Avatar {
-    border-radius: 100%;
+  background-color: var(--avatar-bg-color);
+  border-radius: var(--avatar-radius);
+  display: inline-block;
+  height: var(--avatar-height);
+  overflow: hidden;
+  width: var(--avatar-width);
 }

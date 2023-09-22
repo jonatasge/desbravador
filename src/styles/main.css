@@ -5,7 +5,9 @@ body {
   background-color: var(--colors-bg-body);
   color: var(--colors-text-body);
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height);
 }
 
 .transition-shadow {
