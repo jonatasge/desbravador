@@ -1,7 +1,7 @@
 import { MdArrowDownward, MdArrowUpward, MdStarOutline } from "react-icons/md";
 import { Link as Router } from "react-router-dom";
 
-import { Card, Container, Link, Skeleton, Subtitle } from "@/components/atoms";
+import { Card, Container, Link, Skeleton, Subtitle, Text } from "@/components/atoms";
 import { ClickableCard, Data } from "@/components/molecules";
 import { Overview } from "@/components/orgnanisms";
 import { Repository } from "@/core/models/Repository";
@@ -66,7 +66,9 @@ export const UserTemplate = ({
             user?.bio && (
               <section>
                 <Subtitle className="mb-1">Bio:</Subtitle>
-                <Card className="mb-4">{user?.bio}</Card>
+                <Card className="mb-4">
+                  <Text>{user?.bio}</Text>
+                </Card>
               </section>
             )
           )}
@@ -90,11 +92,11 @@ export const UserTemplate = ({
           ) : (
             <section>
               <div className="section-header flex justify-between">
-                <Subtitle className="mb-1">
-                  50 repositórios mais populares:
+                <Subtitle>
+                  Top 50 repositórios mais populares:
                 </Subtitle>
 
-                <Data label="Ordem:" onClick={onSortChange}>
+                <Data label="Ordem:" onClick={onSortChange} className="select-none">
                   {sort === "asc" ? (
                     <span>
                       Crescente <MdArrowUpward />
@@ -124,7 +126,9 @@ export const UserTemplate = ({
                   </Router>
                 ))
               ) : (
-                <Card className="text-center">Sem repositórios.</Card>
+                <Card className="text-center">
+                  <Text>Sem repositórios.</Text>
+                </Card>
               )}
             </section>
           )}
