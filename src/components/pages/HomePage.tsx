@@ -14,7 +14,7 @@ export const HomePage = () => {
           className="mt-4"
           label={{ children: "Digite o nome de usuário" }}
           input={{ placeholder: "jonatasge" }}
-          onSubmit={(userName) => navigate(userName)}
+          onSubmit={(username) => navigate(username)}
         />
       </div>
     </Container>

@@ -9,7 +9,7 @@ export const router = createBrowserRouter([
     element: <HomePage />,
   },
   {
-    path: "/:userName",
+    path: "/:username",
     element: <UserPage getUser={getUser} />,
   },
 ]);

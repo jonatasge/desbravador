@@ -13,16 +13,16 @@ export const UserPage = ({ getUser }: UserPageProps) => {
   const params = useParams();
   const [user, setUser] = useState<User>();
 
-  const handleUser = async (userName: string) => {
-    const user = await getUser(userName);
+  const handleUser = async (username: string) => {
+    const user = await getUser(username);
     setUser(() => user);
   };
 
   useEffect(() => {
-    if (params.userName) {
-      handleUser(params.userName as string);
+    if (params.username) {
+      handleUser(params.username as string);
     }
-  }, [params.userName]);
+  }, [params.username]);
 
-  return <UserTemplate user={{ ...user, username: params.userName }} />;
+  return <UserTemplate user={{ ...user, username: params.username }} />;
 };

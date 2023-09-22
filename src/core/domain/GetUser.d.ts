@@ -1,1 +1,1 @@
-export type GetUser = (userName: string) => Promise<User>;
+export type GetUser = (username: string) => Promise<User>;
