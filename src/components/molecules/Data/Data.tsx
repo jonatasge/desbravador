@@ -9,7 +9,8 @@ export type DataProps = JSX.IntrinsicElements["p"] & {
 export const Data = ({ children, className, label, ...props }: DataProps) => {
   return (
     <p className={`Data ${className || ""}`} {...props}>
-      <Label>{label}</Label> {children}
+      <Label>{label}</Label>{' '}
+      <span>{children}</span>
     </p>
   );
 };

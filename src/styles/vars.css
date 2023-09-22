@@ -27,6 +27,13 @@
 
   --clickable-card-hover-bg-color: rgba(255, 255, 255, 0.1);
 
+  --data-font-size: 0.85rem;
+  --data-font-weight: 300;
+  --data-line-height: 1rem;
+  --data-label-font-size: 0.85rem;
+  --data-label-font-weight: 600;
+  --data-label-line-height: 1rem;
+
   --link-color: rgb(47, 129, 247);
 
   --skeleton-radius: 0.25rem;
