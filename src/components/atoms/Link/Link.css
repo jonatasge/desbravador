@@ -1,5 +1,5 @@
 .Link {
-  color: var(--colors-link);
+  color: var(--link-color);
   cursor: pointer;
   display: inline-block;
   font-size: 1rem;

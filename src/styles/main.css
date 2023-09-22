@@ -2,18 +2,15 @@
 @import url("./reset.css");
 
 body {
-  background-color: var(--colors-bg-body);
-  color: var(--colors-text-body);
+  background-color: var(--body-bg-color);
+  color: var(--body-text-color);
   font-family: "Roboto", sans-serif;
   font-size: var(--body-font-size);
   font-weight: var(--body-font-weight);
   line-height: var(--body-line-height);
 }
 
-.transition-shadow {
-  transition: box-shadow linear 0.125s;
-}
-
+/* box-shadow */
 .shadow {
   box-shadow: 0 0 6px rgba(150, 150, 150, 0.1);
 }
@@ -26,6 +23,7 @@ body {
   box-shadow: 0 1px 12px rgba(150, 150, 150, 0.2);
 }
 
+/* display flex */
 .flex {
   display: flex;
 }
@@ -38,10 +36,16 @@ body {
   justify-content: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
+/* height, width */
 .h-screen {
   height: 100vh;
 }
 
+/* text-align */
 .text-center {
   text-align: center;
 }
@@ -50,10 +54,7 @@ body {
   text-align: left;
 }
 
-.m-auto {
-  margin: auto;
-}
-
+/* margin */
 .my-1 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -76,14 +77,27 @@ body {
   margin-bottom: 2rem;
 }
 
+/* padding */
 .p-2 {
   padding: 1rem;
 }
 
+/* gap */
 .gap-1 {
   gap: 0.5rem;
 }
 
-.gap-2 {
-  gap: 1rem;
+/* transition */
+.transition {
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-effect);
+  transition-property: all;
+}
+
+.transition-bg-color {
+  transition-property: background-color;
+}
+
+.transition-shadow {
+  transition-property: box-shadow;
 }

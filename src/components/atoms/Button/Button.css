@@ -1,8 +1,8 @@
 .Button {
-  background-color: var(--colors-bg-body);
+  background-color: var(--body-bg-color);
   border-radius: var(--radius);
   border: var(--border);
-  color: var(--colors-text-body);
+  color: var(--body-text-color);
   cursor: pointer;
   display: block;
   font-size: 0.875rem;

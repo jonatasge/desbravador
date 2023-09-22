@@ -1,6 +1,6 @@
 .Input {
-    background-color: var(--colors-bg-body);
-    color: var(--colors-text-body);
+    background-color: var(--body-bg-color);
+    color: var(--body-text-color);
     border-radius: var(--radius);
     border: var(--border);
     font-size: 1rem;

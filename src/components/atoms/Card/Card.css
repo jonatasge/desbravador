@@ -1,4 +1,5 @@
 .Card {
+  background-color: var(--card-bg-color);
   border-radius: var(--card-radius);
   border: var(--card-border);
   padding: 1rem;

@@ -1,22 +1,23 @@
 :root {
-  --colors-bg-body: rgb(13, 17, 23);
-  --colors-text-body: white;
-  --colors-link: rgb(47, 129, 247);
-
   --border: 2px solid rgba(255, 255, 255, 0.15);
   --radius: 2rem;
 
+  --body-bg-color: rgb(13, 17, 23);
   --body-font-size: 16px;
   --body-font-weight: 400;
   --body-line-height: 1.25rem;
+  --body-text-color: white;
 
   --avatar-bg-color: rgba(255, 255, 255, 0.2);
   --avatar-radius: 100%;
   --avatar-height: 100px;
   --avatar-width: 100px;
 
+  --card-bg-color: var(--body-bg-color);
   --card-border: var(--border);
   --card-radius: 0.5rem;
+
+  --link-color: rgb(47, 129, 247);
 
   --skeleton-radius: 0.25rem;
 
@@ -27,6 +28,9 @@
   --title-font-size: 2rem;
   --title-font-weight: 400;
   --title-line-height: 2.5rem;
+
+  --transition-duration: 0.125s;
+  --transition-effect: linear;
 }
 
 @keyframes skeleton-loading {
