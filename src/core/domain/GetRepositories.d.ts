@@ -1,8 +1,8 @@
 import { Repository } from "@/core/models/repository";
 
 export type GetRepositories = (props: {
-  order?: "asc" | "desc";
+  direction?: "asc" | "desc";
   per_page?: number;
-  sort?: "stars" | "forks" | "help-wanted-issues" | "updated";
+  sort?: "created" | "updated" | "pushed" | "full_name";
   username: string;
 }) => Promise<Repository[]>;
