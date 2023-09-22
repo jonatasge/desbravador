@@ -1,4 +1,4 @@
-import { MdStarOutline } from "react-icons/md";
+import { MdArrowDownward, MdArrowUpward, MdStarOutline } from "react-icons/md";
 import { Link as Router } from "react-router-dom";
 
 import { Card, Container, Link, Skeleton, Subtitle } from "@/components/atoms";
@@ -15,6 +15,8 @@ export type UserTemplateProps = {
   };
   loadingRepositories?: boolean;
   repositories?: Repository[];
+  sort?: string;
+  onSortChange?: () => void;
 };
 
 export const UserTemplate = ({
@@ -22,6 +24,8 @@ export const UserTemplate = ({
   user,
   loadingRepositories,
   repositories,
+  sort,
+  onSortChange,
 }: UserTemplateProps) => {
   return (
     <Container className="UserTemplate p-2">
@@ -50,25 +54,25 @@ export const UserTemplate = ({
 
         <Overview.Main className="text-left">
           {loadingUser ? (
-            <>
+            <section>
               <Skeleton
                 type="Subtitle"
                 className="mb-1"
                 style={{ width: 200 }}
               />
               <Skeleton type="Block" className="mb-4" style={{ height: 96 }} />
-            </>
+            </section>
           ) : (
             user?.bio && (
-              <>
+              <section>
                 <Subtitle className="mb-1">Bio:</Subtitle>
                 <Card className="mb-4">{user?.bio}</Card>
-              </>
+              </section>
             )
           )}
 
           {loadingRepositories ? (
-            <>
+            <section>
               <Skeleton
                 type="Subtitle"
                 className="mb-1"
@@ -82,13 +86,34 @@ export const UserTemplate = ({
                   style={{ height: 50 }}
                 />
               ))}
-            </>
+            </section>
           ) : (
-            <>
-              <Subtitle className="mb-1">50 repositórios mais populares:</Subtitle>
+            <section>
+              <div className="section-header flex justify-between">
+                <Subtitle className="mb-1">
+                  50 repositórios mais populares:
+                </Subtitle>
+
+                <Data label="Ordem:" onClick={onSortChange}>
+                  {sort === "asc" ? (
+                    <span>
+                      Crescente <MdArrowUpward />
+                    </span>
+                  ) : (
+                    <span>
+                      Decrescente <MdArrowDownward />
+                    </span>
+                  )}
+                </Data>
+              </div>
+
               {repositories?.length ? (
                 repositories?.map((repository, i) => (
-                  <Router key={i} to={`/${repository.full_name}`} className="RouterLink">
+                  <Router
+                    key={i}
+                    to={`/${repository.full_name}`}
+                    className="RouterLink"
+                  >
                     <ClickableCard className="my-1 flex items-center justify-between">
                       <Link as="h3">{repository.name}</Link>
 
@@ -101,7 +126,7 @@ export const UserTemplate = ({
               ) : (
                 <Card className="text-center">Sem repositórios.</Card>
               )}
-            </>
+            </section>
           )}
         </Overview.Main>
       </Overview.Root>

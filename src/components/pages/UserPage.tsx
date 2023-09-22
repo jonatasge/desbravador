@@ -17,7 +17,8 @@ export const UserPage = ({ getUser, getRepositories }: UserPageProps) => {
   const [loadingUser, setLoadingUser] = useState(false);
   const [user, setUser] = useState<User>();
   const [loadingRepos, setLoadingRepos] = useState(false);
-  const [repos, setRepos] = useState<Repository[]>();
+  const [repos, setRepos] = useState<Repository[]>([]);
+  const [sort, setSort] = useState("desc");
 
   const handleUser = async (username: string) => {
     setLoadingUser(() => true);
@@ -30,11 +31,27 @@ export const UserPage = ({ getUser, getRepositories }: UserPageProps) => {
     setLoadingRepos(() => true);
     const repos = await getRepositories({ username });
     if (repos instanceof Array) {
-      setRepos(() =>
-        repos.sort((a, b) => (a.stargazers_count < b.stargazers_count ? 1 : -1))
-      );
+      setRepos(() => sortRepos({ repos, sort: "desc" }));
     }
     setLoadingRepos(() => false);
+  };
+
+  const sortRepos = ({
+    repos,
+    sort,
+  }: {
+    repos: Repository[];
+    sort: "asc" | "desc";
+  }) => {
+    return repos.sort((a, b) =>
+      sort === "asc"
+        ? a.stargazers_count > b.stargazers_count
+          ? 1
+          : -1
+        : a.stargazers_count < b.stargazers_count
+        ? 1
+        : -1
+    );
   };
 
   useEffect(() => {
@@ -44,12 +61,22 @@ export const UserPage = ({ getUser, getRepositories }: UserPageProps) => {
     }
   }, [params.username]);
 
+  const onSortChange = () => {
+    setSort((sort) => {
+      const newSort = sort === "asc" ? "desc" : "asc"
+      setRepos((repos) => sortRepos({ repos, sort: newSort }));
+      return newSort
+    });
+  };
+
   return (
     <UserTemplate
       loadingUser={loadingUser}
       user={{ ...user, username: params.username }}
       loadingRepositories={loadingRepos}
       repositories={repos}
+      sort={sort}
+      onSortChange={onSortChange}
     />
   );
 };
