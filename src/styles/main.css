@@ -12,6 +12,11 @@ body {
   cursor: pointer;
 }
 
+/* border-radius */
+.rounded {
+  border-radius: 100%;
+}
+
 /* box-shadow */
 .shadow {
   box-shadow: 0 0 6px rgba(150, 150, 150, 0.1);

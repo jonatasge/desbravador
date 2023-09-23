@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { MdCode, MdStarOutline } from "react-icons/md";
 import { PiEye, PiGitFork } from "react-icons/pi";
 import * as SI from "react-icons/si";
-import { useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
@@ -14,10 +13,10 @@ import {
   Container,
   Link,
   Skeleton,
-  Text,
   Title,
 } from "@/components/atoms";
 import { Data } from "@/components/molecules";
+import { Header } from "@/components/orgnanisms";
 import { Repository } from "@/core/models/Repository";
 import { formatNumber, textCapitalize } from "@/utils/data";
 
@@ -34,7 +33,6 @@ export const RepositoryTemplate = ({
   loading = true,
   repo,
 }: RepositoryTemplateProps) => {
-  const navigate = useNavigate();
   const [Icon, setIcon] = useState(() => MdCode);
 
   const handleIcon = (name: string) => {
@@ -53,7 +51,7 @@ export const RepositoryTemplate = ({
 
   return (
     <Container className="RepositoryTemplate p-2">
-      <header className="flex items-center">
+      <Header>
         <div className="logo-wrap">
           {loading ? (
             <>
@@ -65,17 +63,13 @@ export const RepositoryTemplate = ({
               <Avatar src={repo?.owner?.avatar_url} />
 
               <Breadcrumb>
-                <Link onClick={() => navigate(-1)}>
-                  {repo?.owner?.username}
-                </Link>
+                <Title>{repo?.owner?.username}</Title>
                 <Title>{repo?.name}</Title>
               </Breadcrumb>
             </>
           )}
         </div>
-      </header>
-
-      <hr className="-mx-2" />
+      </Header>
 
       <section className="flex items-start justify-center gap-4 mt-3">
         <div className="repo-details">
@@ -106,7 +100,9 @@ export const RepositoryTemplate = ({
 
           {repo?.readme && (
             <Card className="mt-3">
-              <Link href={`${repo.html_url}#readme`} target="_blank">README.md</Link>
+              <Link href={`${repo.html_url}#readme`} target="_blank">
+                README.md
+              </Link>
               <hr className="-mx-2 mt-2" />
 
               <ReactMarkdown

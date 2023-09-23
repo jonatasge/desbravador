@@ -1,27 +1,27 @@
-.RepositoryTemplate > header > .logo-wrap {
+.RepositoryTemplate > .Header > .logo-wrap {
   align-items: center;
   display: flex;
   gap: 0.7rem;
   width: 100%;
 }
 
-.RepositoryTemplate > header > .logo-wrap > .Avatar {
+.RepositoryTemplate > .Header > .logo-wrap > .Avatar {
   height: 24px;
   width: 24px;
 }
 
-.RepositoryTemplate > header > .logo-wrap .Link,
-.RepositoryTemplate > header > .logo-wrap .Title,
-.RepositoryTemplate > header > .logo-wrap .Breadcrumb > .slash {
+.RepositoryTemplate > .Header > .logo-wrap .Link,
+.RepositoryTemplate > .Header > .logo-wrap .Title,
+.RepositoryTemplate > .Header > .logo-wrap .Breadcrumb > .slash {
   font-size: 1.35rem;
   font-weight: 600;
 }
 
-.RepositoryTemplate > header > .logo-wrap > .Skeleton.Title > div {
+.RepositoryTemplate > .Header > .logo-wrap > .Skeleton.Title > div {
   width: 150px;
 }
 
-.RepositoryTemplate > header > .logo-wrap > .Skeleton.Title > div {
+.RepositoryTemplate > .Header > .logo-wrap > .Skeleton.Title > div {
   height: 1.35rem;
 }
 
