@@ -2,3 +2,8 @@
   color: unset;
   text-decoration: none;
 }
+
+.UserTemplate > .Header > .Avatar {
+  height: 24px;
+  width: 24px;
+}
