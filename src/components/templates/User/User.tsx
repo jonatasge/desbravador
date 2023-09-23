@@ -26,9 +26,9 @@ export type UserTemplateProps = {
 };
 
 export const UserTemplate = ({
-  loadingUser,
+  loadingUser = true,
   user,
-  loadingRepositories,
+  loadingRepositories = true,
   repositories,
   sort,
   onSortChange,
