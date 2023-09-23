@@ -20,10 +20,17 @@
   --breadcrumb-slash-font-size: var(--breadcrumb-font-size);
   --breadcrumb-slash-font-weight: var(--breadcrumb-font-weight);
   --breadcrumb-slash-line-height: var(--breadcrumb-line-height);
-
+  
   --card-bg-color: var(--body-bg-color);
   --card-border: var(--border);
   --card-radius: 0.5rem;
+  
+  --chip-bg-color: rgba(255, 255, 255, 0.1);
+  --chip-font-size: 0.85rem;
+  --chip-font-weight: 400;
+  --chip-line-height: 1rem;
+  --chip-padding: 0.5rem 0.75rem;
+  --chip-radius: var(--radius);
 
   --clickable-card-hover-bg-color: rgba(255, 255, 255, 0.1);
 
