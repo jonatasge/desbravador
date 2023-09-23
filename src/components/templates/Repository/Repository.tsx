@@ -3,6 +3,8 @@ import { MdCode, MdStarOutline } from "react-icons/md";
 import { PiEye, PiGitFork } from "react-icons/pi";
 import * as SI from "react-icons/si";
 import { useNavigate } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 
 import {
   Avatar,
@@ -12,6 +14,7 @@ import {
   Container,
   Link,
   Skeleton,
+  Text,
   Title,
 } from "@/components/atoms";
 import { Data } from "@/components/molecules";
@@ -75,32 +78,47 @@ export const RepositoryTemplate = ({
       <hr className="-mx-2" />
 
       <section className="flex items-start justify-center gap-4 mt-3">
-        <Card className="repo-details">
-          {loading ? (
-            <>
-              <Skeleton type="Text" style={{ width: 100 }} />
-              <Skeleton type="Text" />
-              <Skeleton type="Text" style={{ width: "50%" }} />
-            </>
-          ) : (
-            <Data label="Descrição:">{repo?.description}</Data>
-          )}
+        <div className="repo-details">
+          <Card>
+            {loading ? (
+              <>
+                <Skeleton type="Text" style={{ width: 100 }} />
+                <Skeleton type="Text" />
+                <Skeleton type="Text" style={{ width: "50%" }} />
+              </>
+            ) : (
+              <Data label="Descrição:">{repo?.description}</Data>
+            )}
 
-          {loading ? (
-            <>
-              <Skeleton type="Text" style={{ width: 60 }} className="mt-3" />
-              <Skeleton type="Text" style={{ width: "50%" }} />
-            </>
-          ) : (
-            <Data label="Link:" className="mt-3">
-              <Link href={repo?.html_url} target="_blank">
-                {repo?.html_url}
-              </Link>
-            </Data>
-          )}
-        </Card>
+            {loading ? (
+              <>
+                <Skeleton type="Text" style={{ width: 60 }} className="mt-3" />
+                <Skeleton type="Text" style={{ width: "50%" }} />
+              </>
+            ) : (
+              <Data label="Link:" className="mt-3">
+                <Link href={repo?.html_url} target="_blank">
+                  {repo?.html_url}
+                </Link>
+              </Data>
+            )}
+          </Card>
 
-        <div className="repo-data">
+          {repo?.readme && (
+            <Card className="mt-3">
+              <Link href={`${repo.html_url}#readme`} target="_blank">README.md</Link>
+              <hr className="-mx-2 mt-2" />
+
+              <ReactMarkdown
+                rehypePlugins={[rehypeRaw]}
+                children={repo.readme}
+                className="markdown-body p-2"
+              />
+            </Card>
+          )}
+        </div>
+
+        <aside className="repo-data">
           {loading ? (
             <>
               <Skeleton type="Chip" style={{ width: 120 }} />
@@ -148,7 +166,7 @@ export const RepositoryTemplate = ({
               )}
             </>
           )}
-        </div>
+        </aside>
       </section>
     </Container>
   );
