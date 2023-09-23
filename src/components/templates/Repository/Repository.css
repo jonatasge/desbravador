@@ -1,0 +1,78 @@
+.RepositoryTemplate > header > .logo-wrap {
+  align-items: center;
+  display: flex;
+  gap: 0.7rem;
+  width: 100%;
+}
+
+.RepositoryTemplate > header > .logo-wrap > .Avatar {
+  height: 24px;
+  width: 24px;
+}
+
+.RepositoryTemplate > header > .logo-wrap .Link,
+.RepositoryTemplate > header > .logo-wrap .Title,
+.RepositoryTemplate > header > .logo-wrap .Breadcrumb > .slash {
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.RepositoryTemplate > header > .logo-wrap > .Skeleton.Title > div {
+  width: 150px;
+}
+
+.RepositoryTemplate > header > .logo-wrap > .Skeleton.Title > div {
+  height: 1.35rem;
+}
+
+@media (max-width: 991px) {
+  .RepositoryTemplate > section {
+    flex-wrap: wrap;
+  }
+}
+
+.RepositoryTemplate > section > *:first-of-type {
+  width: 100%;
+}
+
+.RepositoryTemplate > section > .Skeleton:last-of-type > div {
+  width: 400px;
+}
+
+@media (max-width: 991px) {
+  .RepositoryTemplate > section > *:last-of-type,
+  .RepositoryTemplate > section > .Skeleton:last-of-type > div {
+    width: 100%;
+  }
+}
+
+.RepositoryTemplate > section .Icon {
+  font-size: 2.5rem;
+}
+
+.RepositoryTemplate > section .repo-details {
+  width: calc(100% - 200px);
+}
+
+@media (max-width: 991px) {
+  .RepositoryTemplate > section .repo-details {
+    width: 100%;
+  }
+}
+
+.RepositoryTemplate > section .repo-details .Data,
+.RepositoryTemplate > section .repo-details .Data .Label {
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+.RepositoryTemplate > section .repo-data {
+  width: 200px;
+}
+
+@media (max-width: 991px) {
+  .RepositoryTemplate > section .repo-data {
+    width: 100%;
+  }
+}
