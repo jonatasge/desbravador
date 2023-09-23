@@ -33,7 +33,7 @@
   --chip-padding-y: 0.5rem;
   --chip-radius: var(--radius);
 
-  --clickable-card-hover-bg-color: rgba(255, 255, 255, 0.1);
+  --clickable-hover-bg-color: rgba(255, 255, 255, 0.1);
 
   --data-font-size: 0.85rem;
   --data-font-weight: 400;

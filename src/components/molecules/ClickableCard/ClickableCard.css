@@ -1,4 +1,4 @@
 .ClickableCard:hover {
-  background-color: var(--clickable-card-hover-bg-color);
+  background-color: var(--clickable-hover-bg-color);
   transition-property: background-color, box-shadow;
 }
