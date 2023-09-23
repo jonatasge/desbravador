@@ -29,13 +29,14 @@
   --chip-font-size: 0.85rem;
   --chip-font-weight: 400;
   --chip-line-height: 1rem;
-  --chip-padding: 0.5rem 0.75rem;
+  --chip-padding-x: 0.75rem;
+  --chip-padding-y: 0.5rem;
   --chip-radius: var(--radius);
 
   --clickable-card-hover-bg-color: rgba(255, 255, 255, 0.1);
 
   --data-font-size: 0.85rem;
-  --data-font-weight: 300;
+  --data-font-weight: 400;
   --data-line-height: 1rem;
   --data-label-font-size: var(--data-font-size);
   --data-label-font-weight: 600;
