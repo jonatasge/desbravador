@@ -1,6 +1,3 @@
-@import url("./vars.css");
-@import url("./reset.css");
-
 body {
   background-color: var(--body-bg-color);
   color: var(--body-text-color);
@@ -41,7 +38,7 @@ hr {
 
 /* display inline-flex */
 .inline-flex {
-  display: flex;
+  display: inline-flex;
 }
 
 /* display flex */
@@ -104,6 +101,11 @@ hr {
   margin: 0;
 }
 
+.\-mx-2 {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
 .my-1 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -112,6 +114,10 @@ hr {
 .my-2 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
 }
 
 .mt-3 {
