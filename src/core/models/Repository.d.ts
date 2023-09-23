@@ -86,4 +86,5 @@ export type Repository = {
   watchers_count: number;
   watchers: number;
   web_commit_signoff_required: boolean;
+  readme?: string;
 };
