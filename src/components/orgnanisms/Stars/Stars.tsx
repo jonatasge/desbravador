@@ -11,7 +11,7 @@ export const Stars = ({ children, className, ...props }: StartsProps) => {
       label={<MdStarOutline />}
       {...props}
     >
-      <span>{formatNumber((children || "") as string)}</span>
+      {formatNumber((children !== undefined ? children : "") as string)}
     </Data>
   );
 };

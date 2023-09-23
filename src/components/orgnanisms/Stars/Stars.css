@@ -1,7 +1,6 @@
-.Stars {
+.Stars,
+.Stars .Label {
   align-items: center;
   display: flex;
   gap: 0.25rem;
-  font-size: 0.85rem;
-  line-height: 1;
 }
