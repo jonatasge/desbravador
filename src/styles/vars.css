@@ -30,17 +30,17 @@
   --data-font-size: 0.85rem;
   --data-font-weight: 300;
   --data-line-height: 1rem;
-  --data-label-font-size: 0.85rem;
+  --data-label-font-size: var(--data-font-size);
   --data-label-font-weight: 600;
-  --data-label-line-height: 1rem;
+  --data-label-line-height: var(--data-line-height);
 
   --link-color: rgb(47, 129, 247);
 
   --skeleton-radius: 0.25rem;
-
-  --subtitle-font-size: 1.25rem;
+  
+  --subtitle-font-size: 0.875rem;
   --subtitle-font-weight: 400;
-  --subtitle-line-height: 1.59rem;
+  --subtitle-line-height: 1.1rem;
 
   --title-font-size: 2rem;
   --title-font-weight: 400;

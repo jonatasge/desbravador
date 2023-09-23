@@ -1,8 +1,3 @@
-.UserTemplate .OverviewMain .Subtitle {
-  font-size: 0.875rem;
-  line-height: 1.1rem;
-}
-
 .UserTemplate .OverviewMain .RouterLink {
   color: unset;
   text-decoration: none;

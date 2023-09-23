@@ -103,14 +103,14 @@ export const UserTemplate = ({
                 <Data
                   label="Ordem:"
                   onClick={onSortChange}
-                  className="select-none"
+                  className="flex gap-1 select-none cursor-pointer"
                 >
                   {sort === "asc" ? (
-                    <span>
+                    <span className="inline-flex items-center gap-0.5">
                       Crescente <MdArrowUpward />
                     </span>
                   ) : (
-                    <span>
+                    <span className="inline-flex items-center gap-0.5">
                       Decrescente <MdArrowDownward />
                     </span>
                   )}
