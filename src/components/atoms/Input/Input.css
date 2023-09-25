@@ -28,7 +28,10 @@
   background-color: transparent;
   border: none;
   color: var(--input-text-color);
+  font-size: var(--input-font-size);
+  font-weight: var(--input-font-weight);
   height: 100%;
+  line-height: var(--input-line-height);
   padding: 0;
   width: 100%;
 }

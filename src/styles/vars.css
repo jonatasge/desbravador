@@ -12,6 +12,7 @@
   --line-height: 1.25rem;
   --text-color: white;
   --xs-font-size: 14px;
+  --xs-font-weight: 400;
   --xs-line-height: 1.09rem;
 
   --avatar-bg-color: rgba(255, 255, 255, 0.2);
@@ -20,7 +21,7 @@
   --avatar-radius: 100%;
   --avatar-width: 100px;
 
-  --breadcrumb-font-size: 0.85rem;
+  --breadcrumb-font-size: 0.875rem;
   --breadcrumb-font-weight: 500;
   --breadcrumb-gap: 0.25rem;
   --breadcrumb-line-height: 1rem;
@@ -45,7 +46,7 @@
   --card-radius: 0.5rem;
   
   --chip-bg-color: rgba(255, 255, 255, 0.1);
-  --chip-font-size: 0.85rem;
+  --chip-font-size: 0.875rem;
   --chip-font-weight: 400;
   --chip-line-height: 1rem;
   --chip-padding-x: 0.75rem;
@@ -53,7 +54,7 @@
   --chip-radius: var(--radius);
   --chip-text-color: var(--text-color);
 
-  --data-font-size: 0.85rem;
+  --data-font-size: 0.875rem;
   --data-font-weight: 400;
   --data-label-font-size: var(--data-font-size);
   --data-label-font-weight: 600;
@@ -94,7 +95,7 @@
   --input-radius: var(--radius);
   --input-text-color: var(--text-color);
 
-  --link-font-size: 1rem;
+  --link-font-size: 0.875rem;
   --link-font-weight: 400;
   --link-text-color: #58a6ff;
 
