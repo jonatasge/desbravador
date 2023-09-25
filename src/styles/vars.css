@@ -94,7 +94,9 @@
   --input-radius: var(--radius);
   --input-text-color: var(--text-color);
 
-  --link-color: #58a6ff;
+  --link-font-size: 1rem;
+  --link-font-weight: 400;
+  --link-text-color: #58a6ff;
 
   --linkCard-focus-bg-color: rgba(255, 255, 255, 0.05);
   --linkCard-hover-bg-color: rgba(255, 255, 255, 0.1);
