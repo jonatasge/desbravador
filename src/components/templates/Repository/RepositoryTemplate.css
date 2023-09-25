@@ -1,67 +1,21 @@
-.RepositoryTemplate > .Header > .logo-wrap {
-  align-items: center;
-  display: flex;
-  gap: 0.7rem;
-  width: 100%;
-}
-
-.RepositoryTemplate > .Header > .logo-wrap > .Avatar {
-  height: 24px;
-  width: 24px;
-}
-
-.RepositoryTemplate > .Header > .logo-wrap .Link,
-.RepositoryTemplate > .Header > .logo-wrap .Title,
-.RepositoryTemplate > .Header > .logo-wrap .Breadcrumb > .slash {
-  font-size: 1.35rem;
-  font-weight: 600;
-}
-
-.RepositoryTemplate > .Header > .logo-wrap > .Skeleton.Title > div {
-  width: 150px;
-}
-
-.RepositoryTemplate > .Header > .logo-wrap > .Skeleton.Title > div {
-  height: 1.35rem;
-}
-
 @media (max-width: 991px) {
   .RepositoryTemplate > section {
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
   }
 }
 
-.RepositoryTemplate > section > *:first-of-type {
-  width: 100%;
-}
-
-.RepositoryTemplate > section > .Skeleton:last-of-type > div {
-  width: 400px;
-}
-
-@media (max-width: 991px) {
-  .RepositoryTemplate > section > *:last-of-type,
-  .RepositoryTemplate > section > .Skeleton:last-of-type > div {
-    width: 100%;
-  }
-}
-
-.RepositoryTemplate > section .Icon {
-  font-size: 2.5rem;
-}
-
-.RepositoryTemplate > section .repo-details {
+.RepositoryTemplate > section > .repo-details {
   width: calc(100% - 200px);
 }
 
 @media (max-width: 991px) {
-  .RepositoryTemplate > section .repo-details {
+  .RepositoryTemplate > section > .repo-details {
     width: 100%;
   }
 }
 
-.RepositoryTemplate > section .repo-details .Data,
-.RepositoryTemplate > section .repo-details .Data .Label {
+.RepositoryTemplate > section > .repo-details > .Card > .Data,
+.RepositoryTemplate > section > .repo-details > .Card > .Data > .Label {
   display: block;
   font-size: 0.875rem;
   line-height: 1.5rem;
@@ -72,7 +26,18 @@
 }
 
 @media (max-width: 991px) {
-  .RepositoryTemplate > section .repo-data {
+  .RepositoryTemplate > section > .repo-data {
     width: 100%;
   }
 }
+
+.RepositoryTemplate > section > .repo-data > .markers {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.RepositoryTemplate > section > .repo-data .Icon {
+  font-size: 2.5rem;
+} 

@@ -41,7 +41,7 @@ export const RepositoryTemplate = ({
   }, [repo]);
 
   return (
-    <Container className="RepositoryTemplate p-2">
+    <Container className="RepositoryTemplate px-2 pb-2">
       <Header.Root>
         <Header.Breadcrumb
           avatar={{ src: repo?.owner?.avatar_url }}
@@ -84,6 +84,7 @@ export const RepositoryTemplate = ({
               <Link href={`${repo.html_url}#readme`} target="_blank">
                 README.md
               </Link>
+              
               <hr className="-mx-2 mt-2" />
 
               <ReactMarkdown
@@ -95,55 +96,55 @@ export const RepositoryTemplate = ({
           )}
         </div>
 
-        <aside className="repo-data">
+        <div className="repo-data">
+          <div className="markers">
+            {loading ? (
+              <>
+                <Skeleton type="Chip" style={{ width: 110 }} />
+                <Skeleton type="Chip" style={{ width: 110 }} />
+                <Skeleton type="Chip" style={{ width: 110 }} />
+              </>
+            ) : (
+              <>
+                <Chip className="inline-flex items-center gap-0.5">
+                  <PiEye /> Watch:
+                  <span>{formatNumber(repo?.subscribers_count || 0)}</span>
+                </Chip>
+
+                <Chip className="inline-flex items-center gap-0.5">
+                  <PiGitFork /> Fork:
+                  <span>{formatNumber(repo?.forks_count || 0)}</span>
+                </Chip>
+
+                <Chip className="inline-flex items-center gap-0.5">
+                  <MdStarOutline /> Star:
+                  <span>{formatNumber(repo?.stargazers_count || 0)}</span>
+                </Chip>
+              </>
+            )}
+          </div>
+
+          <hr className="my-2" />
+
           {loading ? (
-            <>
-              <Skeleton type="Chip" style={{ width: 120 }} />
-              <Skeleton type="Chip" style={{ width: 120 }} className="mt-1" />
-              <Skeleton type="Chip" style={{ width: 120 }} className="mt-1" />
-
-              <hr className="my-2" />
-
-              <div className="flex items-center gap-2 mt-1">
-                <Skeleton type="Block" style={{ height: 40, width: 40 }} />
-                <div>
-                  <Skeleton type="Text" style={{ height: 10, width: 100 }} />
-                  <Skeleton type="Text" style={{ height: 10, width: 100 }} />
-                </div>
+            <div className="flex items-center gap-2 mt-1">
+              <Skeleton type="Block" style={{ height: 40, width: 40 }} />
+              <div>
+                <Skeleton type="Text" style={{ height: 10, width: 100 }} />
+                <Skeleton type="Text" style={{ height: 10, width: 100 }} />
               </div>
-            </>
+            </div>
           ) : (
             <>
-              <Chip className="inline-flex items-center gap-0.5">
-                <PiEye /> Watch:
-                <span>{formatNumber(repo?.subscribers_count || 0)}</span>
-              </Chip>
-              <br />
-
-              <Chip className="inline-flex items-center gap-0.5 mt-1">
-                <PiGitFork /> Fork:
-                <span>{formatNumber(repo?.forks_count || 0)}</span>
-              </Chip>
-              <br />
-
-              <Chip className="inline-flex items-center gap-0.5 mt-1">
-                <MdStarOutline /> Star:
-                <span>{formatNumber(repo?.stargazers_count || 0)}</span>
-              </Chip>
-
               {repo?.language && (
-                <>
-                  <hr className="my-2" />
-
-                  <div className="flex items-center gap-2 mt-1">
-                    <Icon className="Icon" />
-                    <Data label="Linguagem:">{repo?.language}</Data>
-                  </div>
-                </>
+                <div className="flex items-center gap-2 mt-1">
+                  <Icon className="Icon" />
+                  <Data label="Linguagem:">{repo?.language}</Data>
+                </div>
               )}
             </>
           )}
-        </aside>
+        </div>
       </section>
     </Container>
   );
