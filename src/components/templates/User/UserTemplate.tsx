@@ -1,5 +1,4 @@
 import { MdArrowDownward, MdArrowUpward } from "react-icons/md";
-import { Link as Router } from "react-router-dom";
 
 import {
   Card,
@@ -9,7 +8,7 @@ import {
   Subtitle,
   Text,
 } from "@/components/atoms";
-import { ClickableCard, Data, LinkCard } from "@/components/molecules";
+import { Data, LinkCard } from "@/components/molecules";
 import { Header, Overview, Stars } from "@/components/orgnanisms";
 import { Repository } from "@/core/models/Repository";
 import { User } from "@/core/models/User";
@@ -52,8 +51,8 @@ export const UserTemplate = ({
         >
           {loadingUser ? (
             <>
-              <Skeleton type="Text" />
-              <Skeleton type="Text" />
+              <Skeleton type="Text" style={{ width: 150 }} />
+              <Skeleton type="Text" style={{ width: 180 }} />
             </>
           ) : (
             <>

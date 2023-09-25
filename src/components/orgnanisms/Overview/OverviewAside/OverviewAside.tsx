@@ -23,16 +23,11 @@ export const OverviewAside = ({
   return (
     <div className={`OverviewAside ${className || ""}`} {...props}>
       {loading ? (
-        <>
-          <Skeleton type="Avatar" className={avatar?.className} />
-          <Skeleton type="Title" className={title?.className} />
-        </>
+        <Skeleton type="Avatar" className={avatar?.className} />
       ) : (
-        <>
-          <Avatar {...avatar} />
-          <Title {...title} />
-        </>
+        <Avatar {...avatar} />
       )}
+      <Title {...title} />
 
       {children}
     </div>

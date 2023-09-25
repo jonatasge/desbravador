@@ -15,7 +15,14 @@
   } 
 }
 
-.OverviewAside .Title {
+@media (max-width: 767px) {
+  .OverviewAside > .Avatar {
+    height: 120px;
+    width: 120px;
+  } 
+}
+
+.OverviewAside > .Title {
   font-size: 1.5rem;
   font-weight: 600;
 }
