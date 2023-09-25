@@ -7,13 +7,12 @@ export const HomePage = () => {
   const navigate = useNavigate();
 
   return (
-    <Container className="flex items-center justify-center h-screen text-center">
-      <div className="p-2">
-        <Title className="my-2">Encontre os repositórios mais populares!</Title>
+    <Container className="flex items-center justify-center h-screen text-center p-2">
+      <div>
+        <Title>Encontre os repositórios mais populares!</Title>
         <Search
           className="mt-4"
-          label={{ children: "Digite o nome de usuário" }}
-          input={{ placeholder: "jonatasge" }}
+          input={{ autoFocus: true, placeholder: "Digite o nome de usuário" }}
           onSubmit={(username) => navigate(username)}
         />
       </div>
