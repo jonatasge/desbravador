@@ -6,3 +6,7 @@
   font-weight: 400;
   text-decoration: none;
 }
+
+.Link:hover {
+  text-decoration: underline;
+}
