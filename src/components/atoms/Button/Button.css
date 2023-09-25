@@ -17,3 +17,7 @@
 .Button:hover {
   background-color: var(--button-hover-bg-color);
 }
+
+.Button:focus {
+  background-color: var(--button-focus-bg-color);
+}

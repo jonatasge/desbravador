@@ -29,8 +29,8 @@
   --breadcrumb-slash-line-height: var(--breadcrumb-line-height);
   
   --button-bg-color: rgba(255, 255, 255, 0.05);
+  --button-focus-bg-color: rgba(255, 255, 255, 0.1);
   --button-hover-bg-color: rgba(255, 255, 255, 0.1);
-  --button-text-color: var(--text-color);
   --button-border: none;
   --button-font-size: 0.875rem;
   --button-font-weight: 600;
@@ -38,6 +38,7 @@
   --button-line-height: 1.25rem;
   --button-padding: 0.6rem 1.6rem;
   --button-radius: 0.5rem;
+  --button-text-color: var(--text-color);
 
   --card-bg-color: var(--bg-color);
   --card-border: var(--border);
