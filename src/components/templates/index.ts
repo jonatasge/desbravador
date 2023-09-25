@@ -1,2 +1,2 @@
-export * from './Repository/Repository'
-export * from './User/User'
+export * from './Repository/RepositoryTemplate'
+export * from './User/UserTemplate'
