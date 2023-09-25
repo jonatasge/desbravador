@@ -34,7 +34,7 @@ export const UserTemplate = ({
   onSortChange,
 }: UserTemplateProps) => {
   return (
-    <Container className="UserTemplate p-2">
+    <Container className="UserTemplate px-2">
       <Header.Root>
         <Header.Breadcrumb
           avatar={{ src: user?.avatar_url }}
