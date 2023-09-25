@@ -1,13 +1,19 @@
 .Button {
-  background-color: var(--body-bg-color);
-  border-radius: var(--radius);
-  border: var(--border);
-  color: var(--body-text-color);
+  align-items: center;
+  background-color: var(--button-bg-color);
+  border-radius: var(--button-radius);
+  border: var(--button-border);
+  color: var(--button-text-color);
   cursor: pointer;
-  display: block;
-  font-size: 0.875rem;
-  font-weight: 600;
-  height: 2.625rem;
-  line-height: 1.25rem;
-  padding: 0.6rem 1.6rem;
+  display: inline-flex;
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  height: var(--button-height);
+  justify-content: center;
+  line-height: var(--button-line-height);
+  padding: var(--button-padding);
+}
+
+.Button:hover {
+  background-color: var(--button-hover-bg-color);
 }
