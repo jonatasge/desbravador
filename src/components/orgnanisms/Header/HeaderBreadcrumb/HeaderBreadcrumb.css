@@ -1,7 +1,7 @@
 .HeaderBreadcrumb {
   align-items: center;
   display: flex;
-  gap: 0.5rem;
+  gap: var(--header-breadcrumb-gap);
   width: 100%;
 }
 

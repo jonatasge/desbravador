@@ -16,17 +16,12 @@ export const HeaderBreadcrumb = ({
 }: HeaderBreadcrumbProps) => {
   return (
     <div className={`HeaderBreadcrumb ${className || ""}`} {...props}>
-      {loading ? (
-        <>
-          {showAvatar && <Skeleton type="Avatar" />}
-          <Skeleton type="Text" />
-        </>
+      {showAvatar && loading ? (
+        <Skeleton type="Avatar" />
       ) : (
-        <>
-          {showAvatar && <Avatar {...avatar} />}
-          <Breadcrumb>{children}</Breadcrumb>
-        </>
+        <Avatar {...avatar} />
       )}
+      <Breadcrumb>{children}</Breadcrumb>
     </div>
   );
 };
