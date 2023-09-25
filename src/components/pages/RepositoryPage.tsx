@@ -26,7 +26,14 @@ export const RepositoryPage = () => {
   return (
     <RepositoryTemplate
       loading={loading}
-      repo={{ ...repo, owner: { ...repo?.owner, username: params.username } }}
+      repo={{
+        ...repo,
+        name: params.repository,
+        owner: {
+          ...repo?.owner,
+          username: params.username,
+        },
+      }}
     />
   );
 };
