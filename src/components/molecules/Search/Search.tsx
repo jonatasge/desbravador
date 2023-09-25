@@ -1,23 +1,17 @@
-import {
-  Button,
-  ButtonProps,
-  Input,
-  InputProps,
-  Label,
-} from "@/components/atoms";
+import { Button, ButtonProps, Input, InputProps } from "@/components/atoms";
 import { getFormValues } from "@/utils/form";
 import { FormEvent } from "react";
+import { MdSearch } from "react-icons/md";
 
 export type SearchProps = Omit<JSX.IntrinsicElements["form"], "onSubmit"> & {
   button?: ButtonProps;
   input?: InputProps;
-  label?: JSX.IntrinsicElements["label"];
   onSubmit?: (search: string) => void;
 };
 
 export const Search = ({
   className,
-  label,
+
   input,
   button,
   onSubmit,
@@ -35,9 +29,14 @@ export const Search = ({
       onSubmit={handleOnSubmit}
       {...props}
     >
-      <Label htmlFor="search" {...label} />
-      <div className="container">
-        <Input id="search" name="search" required={true} {...input} />
+      <div className="flex flex-wrap items-center justify-center gap-2">
+        <Input
+          id="search"
+          name="search"
+          required={true}
+          before={<MdSearch />}
+          {...input}
+        />
         <Button type="submit" {...button}>
           Pesquisar
         </Button>

@@ -1,12 +1,16 @@
-export type InputProps = JSX.IntrinsicElements["input"];
+import { ReactNode } from "react";
 
-export const Input = ({ className, ...props }: InputProps) => {
+export type InputProps = JSX.IntrinsicElements["input"] & {
+  before?: ReactNode;
+  after?: ReactNode;
+};
+
+export const Input = ({ after, before, className, ...props }: InputProps) => {
   return (
-    <input
-      className={`Input transition transition-shadow shadow hover:shadow focus:shadow ${
-        className || ""
-      }`}
-      {...props}
-    />
+    <div className={`Input ${className || ""}`}>
+      {before}
+      <input {...props} />
+      {after}
+    </div>
   );
 };
