@@ -1,10 +1,13 @@
-body {
-  background-color: var(--body-bg-color);
-  color: var(--body-text-color);
+html {
   font-family: "Roboto", sans-serif;
-  font-size: var(--body-font-size);
-  font-weight: var(--body-font-weight);
-  line-height: var(--body-line-height);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 /* cursor */
