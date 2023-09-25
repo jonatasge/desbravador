@@ -2,11 +2,9 @@ import { useEffect, useState } from "react";
 import { MdCode, MdStarOutline } from "react-icons/md";
 import { PiEye, PiGitFork } from "react-icons/pi";
 import * as SI from "react-icons/si";
-import ReactMarkdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
 
 import { Card, Chip, Container, Link, Skeleton } from "@/components/atoms";
-import { Data } from "@/components/molecules";
+import { Data, Markdown } from "@/components/molecules";
 import { Header } from "@/components/orgnanisms";
 import { Repository } from "@/core/models/Repository";
 import { formatNumber, textCapitalize } from "@/utils/data";
@@ -84,14 +82,10 @@ export const RepositoryTemplate = ({
               <Link href={`${repo.html_url}#readme`} target="_blank">
                 README.md
               </Link>
-              
+
               <hr className="-mx-2 mt-2" />
 
-              <ReactMarkdown
-                rehypePlugins={[rehypeRaw]}
-                children={repo.readme}
-                className="markdown-body p-2"
-              />
+              <Markdown children={repo.readme} />
             </Card>
           )}
         </div>
