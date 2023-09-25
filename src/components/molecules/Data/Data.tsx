@@ -10,7 +10,7 @@ export const Data = ({ children, className, label, ...props }: DataProps) => {
   return (
     <p className={`Data ${className || ""}`} {...props}>
       <Label>{label}</Label>{' '}
-      <span>{children}</span>
+      {children}
     </p>
   );
 };

@@ -105,7 +105,7 @@ export const UserTemplate = ({
             </section>
           ) : (
             <section>
-              <div className="section-header flex justify-between">
+              <div className="section-header flex items-end justify-between">
                 <Subtitle>Top 50 repositórios mais populares:</Subtitle>
 
                 <Data

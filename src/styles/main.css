@@ -70,6 +70,10 @@ hr {
   align-items: center;
 }
 
+.items-end {
+  align-items: end;
+}
+
 .items-start {
   align-items: start;
 }
