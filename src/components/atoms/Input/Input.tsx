@@ -7,7 +7,7 @@ export type InputProps = JSX.IntrinsicElements["input"] & {
 
 export const Input = ({ after, before, className, ...props }: InputProps) => {
   return (
-    <div className={`Input ${className || ""}`}>
+    <div className={`Input transition transition-bg-color ${className || ""}`}>
       {before}
       <input {...props} />
       {after}

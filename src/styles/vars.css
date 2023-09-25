@@ -66,6 +66,19 @@
   --header-breadcrumb-font-weight: 600;
   --header-breadcrumb-line-height: 1.5625rem;
 
+  --input-bg-color: var(--bg-color);
+  --input-focus-bg-color: rgba(255, 255, 255, 0.05);
+  --input-hover-bg-color: rgba(255, 255, 255, 0.1);
+  --input-border: var(--border);
+  --input-font-size: 1rem;
+  --input-font-weight: 400;
+  --input-gap: 0.5rem;
+  --input-height: 2.625rem;
+  --input-line-height: 1.25rem;
+  --input-padding: 0.5rem 0.75rem;
+  --input-radius: var(--radius);
+  --input-text-color: var(--text-color);
+
   --link-color: rgb(47, 129, 247);
 
   --skeleton-radius: 0.25rem;

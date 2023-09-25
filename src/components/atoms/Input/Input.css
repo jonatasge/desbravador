@@ -1,25 +1,32 @@
 .Input {
   align-items: center;
-  background-color: var(--body-bg-color);
-  border-radius: var(--radius);
-  border: var(--border);
-  color: var(--body-text-color);
+  background-color: var(--input-bg-color);
+  border-radius: var(--input-radius);
+  border: var(--input-border);
+  color: var(--input-text-color);
   display: inline-flex;
-  font-size: 1rem;
-  gap: 0.5rem;
-  height: 2.625rem;
-  padding: 0.5rem 0.75rem;
+  font-size: var(--input-font-size);
+  font-weight: var(--input-font-weight);
+  gap: var(--input-gap);
+  height: var(--input-height);
+  line-height: var(--input-line-height);
+  padding: var(--input-padding);
   width: 100%;
 }
 
+.Input:hover {
+  background-color: var(--input-hover-bg-color);
+}
+
 .Input:focus-within {
+  background-color: var(--input-focus-bg-color);
   outline: var(--outline);
 }
 
 .Input > input {
   background-color: transparent;
   border: none;
-  color: var(--body-text-color);
+  color: var(--input-text-color);
   height: 100%;
   padding: 0;
   width: 100%;
