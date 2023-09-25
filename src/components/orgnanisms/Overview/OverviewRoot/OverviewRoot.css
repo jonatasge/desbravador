@@ -14,4 +14,13 @@
   .OverviewRoot {
     display: block;
   }
+
+  .OverviewRoot .OverviewAside {
+    padding: 0;
+  }
+
+  .OverviewRoot .OverviewMain {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
