@@ -61,9 +61,25 @@
   --data-label-line-height: var(--data-line-height);
   --data-line-height: 1rem;
 
+  --header-border-bottom: var(--border);
+  --header-gap: 1rem;
+  --header-margin: 0 -1rem;
+  --header-padding: 0.5rem;
+
+  --header-back-button-bg-color: transparent;
+  --header-back-button-focus-bg-color: rgba(255, 255, 255, 0.05);
+  --header-back-button-hover-bg-color: rgba(255, 255, 255, 0.1);
+  --header-back-button-border: none;
+  --header-back-button-font-size: 1.25rem;
+  --header-back-button-height: 2.625rem;
+  --header-back-button-shadow: none;
+  --header-back-button-text-color: var(--text-color);
+  --header-back-button-width: var(--header-back-button-height);
+
   --header-breadcrumb-avatar-size: 1.5625rem;
   --header-breadcrumb-font-size: 1.25rem;
   --header-breadcrumb-font-weight: 600;
+  --header-breadcrumb-gap: 0.5rem;
   --header-breadcrumb-line-height: 1.5625rem;
 
   --input-bg-color: var(--bg-color);
