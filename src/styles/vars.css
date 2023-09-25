@@ -11,6 +11,8 @@
   --font-weight: 400;
   --line-height: 1.25rem;
   --text-color: white;
+  --xs-font-size: 14px;
+  --xs-line-height: 1.09rem;
 
   --avatar-bg-color: rgba(255, 255, 255, 0.2);
   --avatar-border: 1px var(--border-style) var(--border-color);
@@ -25,7 +27,7 @@
   --breadcrumb-slash-font-size: var(--breadcrumb-font-size);
   --breadcrumb-slash-font-weight: var(--breadcrumb-font-weight);
   --breadcrumb-slash-line-height: var(--breadcrumb-line-height);
-
+  
   --card-bg-color: var(--bg-color);
   --card-border: var(--border);
   --card-radius: 0.5rem;

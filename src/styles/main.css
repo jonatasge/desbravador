@@ -5,6 +5,13 @@ html {
   line-height: var(--line-height);
 }
 
+@media (max-width: 767px) {
+  html {
+    font-size: var(--xs-font-size);
+    line-height: var(--xs-line-height);
+  }
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -156,6 +163,10 @@ hr {
 .px-2 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.pb-2 {
+  padding-bottom: 1rem;
 }
 
 /* select */
