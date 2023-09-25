@@ -53,8 +53,6 @@
   --chip-radius: var(--radius);
   --chip-text-color: var(--text-color);
 
-  --clickable-hover-bg-color: rgba(255, 255, 255, 0.1);
-
   --data-font-size: 0.85rem;
   --data-font-weight: 400;
   --data-label-font-size: var(--data-font-size);
@@ -97,6 +95,9 @@
   --input-text-color: var(--text-color);
 
   --link-color: #58a6ff;
+
+  --linkCard-focus-bg-color: rgba(255, 255, 255, 0.05);
+  --linkCard-hover-bg-color: rgba(255, 255, 255, 0.1);
 
   --skeleton-radius: 0.25rem;
   

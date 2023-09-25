@@ -7,9 +7,9 @@ import {
   Link,
   Skeleton,
   Subtitle,
-  Text
+  Text,
 } from "@/components/atoms";
-import { ClickableCard, Data } from "@/components/molecules";
+import { ClickableCard, Data, LinkCard } from "@/components/molecules";
 import { Header, Overview, Stars } from "@/components/orgnanisms";
 import { Repository } from "@/core/models/Repository";
 import { User } from "@/core/models/User";
@@ -128,17 +128,16 @@ export const UserTemplate = ({
 
               {repositories?.length ? (
                 repositories?.map((repository, i) => (
-                  <Router
+                  <LinkCard
                     key={i}
                     to={`/${repository.full_name}`}
-                    className="RouterLink"
+                    className="block my-1"
                   >
-                    <ClickableCard className="my-1 flex items-center justify-between">
+                    <div className="flex items-center justify-between">
                       <Link as="h3">{repository.name}</Link>
-
                       <Stars>{repository.stargazers_count}</Stars>
-                    </ClickableCard>
-                  </Router>
+                    </div>
+                  </LinkCard>
                 ))
               ) : (
                 <Card className="text-center mt-1">
