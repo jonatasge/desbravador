@@ -5,16 +5,7 @@ import * as SI from "react-icons/si";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
-import {
-  Avatar,
-  Breadcrumb,
-  Card,
-  Chip,
-  Container,
-  Link,
-  Skeleton,
-  Title,
-} from "@/components/atoms";
+import { Card, Chip, Container, Link, Skeleton } from "@/components/atoms";
 import { Data } from "@/components/molecules";
 import { Header } from "@/components/orgnanisms";
 import { Repository } from "@/core/models/Repository";
@@ -51,25 +42,15 @@ export const RepositoryTemplate = ({
 
   return (
     <Container className="RepositoryTemplate p-2">
-      <Header>
-        <div className="logo-wrap">
-          {loading ? (
-            <>
-              <Skeleton type="Avatar" />
-              <Skeleton type="Title" />
-            </>
-          ) : (
-            <>
-              <Avatar src={repo?.owner?.avatar_url} />
-
-              <Breadcrumb>
-                <Title>{repo?.owner?.username}</Title>
-                <Title>{repo?.name}</Title>
-              </Breadcrumb>
-            </>
-          )}
-        </div>
-      </Header>
+      <Header.Root>
+        <Header.Breadcrumb
+          avatar={{ src: repo?.owner?.avatar_url }}
+          loading={loading}
+        >
+          {repo?.owner?.username}
+          {repo?.name}
+        </Header.Breadcrumb>
+      </Header.Root>
 
       <section className="flex items-start justify-center gap-4 mt-3">
         <div className="repo-details">

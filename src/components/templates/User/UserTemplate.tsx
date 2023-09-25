@@ -2,14 +2,12 @@ import { MdArrowDownward, MdArrowUpward } from "react-icons/md";
 import { Link as Router } from "react-router-dom";
 
 import {
-  Avatar,
   Card,
   Container,
   Link,
   Skeleton,
   Subtitle,
-  Text,
-  Title,
+  Text
 } from "@/components/atoms";
 import { ClickableCard, Data } from "@/components/molecules";
 import { Header, Overview, Stars } from "@/components/orgnanisms";
@@ -37,10 +35,14 @@ export const UserTemplate = ({
 }: UserTemplateProps) => {
   return (
     <Container className="UserTemplate p-2">
-      <Header>
-        <Avatar src={user?.avatar_url} />
-        <Title>{user?.name}</Title>
-      </Header>
+      <Header.Root>
+        <Header.Breadcrumb
+          avatar={{ src: user?.avatar_url }}
+          loading={loadingUser}
+        >
+          {user?.username}
+        </Header.Breadcrumb>
+      </Header.Root>
 
       <Overview.Root className="mt-3">
         <Overview.Aside

@@ -46,6 +46,11 @@
   --data-label-font-weight: 600;
   --data-label-line-height: var(--data-line-height);
 
+  --header-breadcrumb-avatar-size: 1.5625rem;
+  --header-breadcrumb-font-size: 1.25rem;
+  --header-breadcrumb-font-weight: 600;
+  --header-breadcrumb-line-height: 1.5625rem;
+
   --link-color: rgb(47, 129, 247);
 
   --skeleton-radius: 0.25rem;
