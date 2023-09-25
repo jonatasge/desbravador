@@ -1,5 +1,8 @@
 :root {
-  --border: 2px solid rgba(255, 255, 255, 0.15);
+  --border-width: 2px;
+  --border-style: solid;
+  --border-color: rgba(255, 255, 255, 0.15);
+  --border: var(--border-width) var(--border-style) var(--border-color);
   --radius: 2rem;
 
   --body-bg-color: rgb(13, 17, 23);
@@ -9,6 +12,7 @@
   --body-text-color: white;
 
   --avatar-bg-color: rgba(255, 255, 255, 0.2);
+  --avatar-border: 1px var(--border-style) var(--border-color);
   --avatar-radius: 100%;
   --avatar-height: 100px;
   --avatar-width: 100px;
